@@ -1,0 +1,4 @@
+# Registered Courses File
+# Format: courseCode|courseName|program|credits
+BCS303|Object Oriented Programming|BCS|4
+BCS302|Database Management Systems|BCS|4

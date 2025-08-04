@@ -1,0 +1,72 @@
+/* MAIN BACKGROUND */
+.root {
+    -fx-background-color: #F4F7FE;
+}
+
+/* UNIVERSAL BUTTON STYLE */
+.button {
+    -fx-background-color: #4E71FF;
+    -fx-text-fill: white;             /* ✅ White Text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;            /* ✅ Bold Text */
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(78,113,255,0.3), 8, 0, 0, 4);
+}
+
+.button:hover {
+    -fx-background-color: #3f5be0;
+}
+
+.button:focused {
+    -fx-effect: dropshadow(gaussian, rgba(78,113,255,0.4), 10, 0.1, 0, 0);
+}
+
+/* TEXTFIELDS, PASSWORD FIELDS, ETC */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4E71FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(78,113,255,0.3), 6, 0, 0, 0);
+}
+
+/* LABELS AND HEADINGS */
+.label {
+    -fx-text-fill: #222;
+    -fx-font-size: 16px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* CARD / PANEL STYLE */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 4);
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+/* HYPERLINKS */
+.hyperlink {
+    -fx-text-fill: #4E71FF;
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}

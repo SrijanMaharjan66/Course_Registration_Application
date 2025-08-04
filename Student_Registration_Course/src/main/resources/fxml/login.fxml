@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.LoginController">
+   <center>
+      <VBox alignment="CENTER" spacing="40.0" style="-fx-padding: 40px;">
+         <children>
+            <!-- Header Section -->
+            <VBox alignment="CENTER" spacing="16.0">
+               <children>
+                  <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #1A2A80; -fx-effect: dropshadow(gaussian, rgba(26,42,128,0.4), 4, 0, 0, 2);" text="MyTimes Portal">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 16px; -fx-text-fill: #3B38A0; -fx-font-weight: 500;" text="Log in to your designated library" />
+               </children>
+            </VBox>
+            
+            <!-- Login Form -->
+            <VBox alignment="CENTER" maxWidth="400.0" spacing="24.0" style="-fx-background-color: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); -fx-background-radius: 20px; -fx-padding: 40px; -fx-effect: dropshadow(gaussian, rgba(26,42,128,0.15), 20, 0, 0, 10); -fx-border-color: #B2B0E8; -fx-border-width: 2px; -fx-border-radius: 20px;">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #1A2A80;" text="Username" />
+                        <TextField fx:id="usernameField" promptText="Enter your username" style="-fx-font-size: 14px; -fx-padding: 16px 20px; -fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #B2B0E8; -fx-border-width: 2px; -fx-border-radius: 12px; -fx-text-fill: #1A2A80;" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #1A2A80;" text="Password" />
+                        <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-font-size: 14px; -fx-padding: 16px 20px; -fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #B2B0E8; -fx-border-width: 2px; -fx-border-radius: 12px; -fx-text-fill: #1A2A80;" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" spacing="16.0">
+                     <children>
+                        <Button onAction="#handleLogin" prefWidth="200.0" style="-fx-font-weight: 500; -fx-font-size: 14px; -fx-padding: 14px 28px; -fx-background-radius: 12px; -fx-background-color: linear-gradient(135deg, #1A2A80 0%, #3B38A0 100%); -fx-text-fill: white; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(26,42,128,0.2), 8, 0, 0, 4);" text="Log In" />
+                        <HBox alignment="CENTER" spacing="12.0">
+                           <children>
+                              <Button onAction="#handleRegister" style="-fx-font-weight: 500; -fx-font-size: 14px; -fx-padding: 12px 24px; -fx-background-radius: 12px; -fx-background-color: linear-gradient(135deg, #B2B0E8 0%, #7A85C1 100%); -fx-text-fill: #1A2A80; -fx-border-color: #7A85C1; -fx-border-width: 2px; -fx-border-radius: 12px; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(26,42,128,0.15), 6, 0, 0, 3);" text="Create Your Account" />
+                              <Button onAction="#handleExit" style="-fx-font-weight: 500; -fx-font-size: 14px; -fx-padding: 12px 24px; -fx-background-radius: 12px; -fx-background-color: linear-gradient(135deg, #1A2A80 0%, #7A85C1 100%); -fx-text-fill: white; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(26,42,128,0.2), 6, 0, 0, 3);" text="Exit" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            
+            <!-- Demo Credentials -->
+            <VBox alignment="CENTER" spacing="4.0">
+               <children>
+                  <Label style="-fx-font-size: 15px; -fx-text-fill: #7A85C1; -fx-font-style: italic;" text="Welcome To MyTimes!" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #7A85C1; -fx-font-style: italic;" text="New to the platform?" />
+                  <Label style="-fx-font-size: 11px; -fx-text-fill: #7A85C1; -fx-font-style: italic;" text="Create a new account to get started with course registration" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

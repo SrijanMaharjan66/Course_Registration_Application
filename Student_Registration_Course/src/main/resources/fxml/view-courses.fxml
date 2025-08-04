@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="24.0" styleClass="container" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ViewCoursesController">
+   <children>
+      <!-- Header Section -->
+      <VBox alignment="CENTER" spacing="8.0" styleClass="card-header">
+         <children>
+            <Label styleClass="title" text="My Registered Courses">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label styleClass="body-text" text="View and manage your enrolled courses" />
+         </children>
+      </VBox>
+      
+      <!-- Statistics Cards -->
+      <HBox alignment="CENTER" spacing="24.0">
+         <children>
+            <VBox alignment="CENTER" spacing="8.0" styleClass="stats-card">
+               <children>
+                  <Label fx:id="totalCoursesLabel" styleClass="stats-number" text="0" />
+                  <Label styleClass="stats-label" text="Total Courses" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="8.0" styleClass="stats-card">
+               <children>
+                  <Label fx:id="totalCreditsLabel" styleClass="stats-number" text="0" />
+                  <Label styleClass="stats-label" text="Total Credits" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <!-- Courses Table -->
+      <TableView fx:id="coursesTable" prefHeight="350.0" styleClass="table-view">
+         <columns>
+            <TableColumn fx:id="codeColumn" prefWidth="140.0" text="Course Code" />
+            <TableColumn fx:id="nameColumn" prefWidth="350.0" text="Course Name" />
+            <TableColumn fx:id="programColumn" prefWidth="120.0" text="Program" />
+            <TableColumn fx:id="creditsColumn" prefWidth="100.0" text="Credits" />
+         </columns>
+      </TableView>
+      
+      <!-- Action Buttons -->
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <Button onAction="#handleDeleteCourse" styleClass="btn, btn-danger" text="Remove Selected Course" />
+            <Button onAction="#handleRefresh" styleClass="btn, btn-secondary" text="Refresh" />
+            <Button onAction="#handleBackToDashboard" styleClass="btn, btn-primary" text="Back to Dashboard" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

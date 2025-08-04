@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="24.0" styleClass="container" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ChartsController">
+   <children>
+      <!-- Header Section -->
+      <VBox alignment="CENTER" spacing="8.0" styleClass="card-header">
+         <children>
+            <Label styleClass="title" text="Academic Analytics">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="studentNameLabel" styleClass="body-text" text="Student: " />
+         </children>
+      </VBox>
+      
+      <!-- Statistics Cards -->
+      <HBox alignment="CENTER" spacing="24.0">
+         <children>
+            <VBox alignment="CENTER" spacing="8.0" styleClass="stats-card">
+               <children>
+                  <Label fx:id="totalCoursesLabel" styleClass="stats-number" text="0" />
+                  <Label styleClass="stats-label" text="Total Courses" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="8.0" styleClass="stats-card">
+               <children>
+                  <Label fx:id="totalCreditsLabel" styleClass="stats-number" text="0" />
+                  <Label styleClass="stats-label" text="Total Credits" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <!-- Charts Section -->
+      <TabPane fx:id="chartsTabPane" prefHeight="450.0" styleClass="tab-pane" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="pieChartTab" text="Distribution View">
+               <content>
+                  <VBox alignment="CENTER" spacing="16.0" styleClass="card-body">
+                     <children>
+                        <PieChart fx:id="coursesPieChart" prefHeight="380.0" prefWidth="500.0" styleClass="chart" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="barChartTab" text="Comparison View">
+               <content>
+                  <VBox alignment="CENTER" spacing="16.0" styleClass="card-body">
+                     <children>
+                        <BarChart fx:id="coursesBarChart" prefHeight="380.0" prefWidth="600.0" styleClass="chart">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </BarChart>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      
+      <!-- Action Buttons -->
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <Button onAction="#handleRefresh" styleClass="btn, btn-secondary" text="Refresh Data" />
+            <Button onAction="#handleBackToDashboard" styleClass="btn, btn-primary" text="Back to Dashboard" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

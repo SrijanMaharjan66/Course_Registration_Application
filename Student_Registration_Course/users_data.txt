@@ -1,0 +1,9 @@
+# Users Data File
+# Format: username|password|name|email|program|semester
+alice_brown|passabc|Alice Brown|alice.brown@email.com|BBA|1
+jane_smith|pass456|Jane Smith|jane.smith@email.com|BCS|4
+student|password123|Admin User|admin@example.com|Computer Science|5
+john_doe|pass123|John Doe|john.doe@email.com|BBA|3
+bob_wilson|pass789|Bob Wilson|bob.wilson@email.com|BBS|2
+Srijan12|srijan12|Srijan Maharjan|srijan@gmail.com|BCS|1
+charlie_davis|passxyz|Charlie Davis|charlie.davis@email.com|BCS|6

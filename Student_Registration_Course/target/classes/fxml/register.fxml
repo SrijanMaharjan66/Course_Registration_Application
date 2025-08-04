@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.RegisterController">
+   <center>
+      <VBox alignment="CENTER" spacing="32.0" styleClass="container">
+         <children>
+            <!-- Header -->
+            <VBox alignment="CENTER" spacing="8.0">
+               <children>
+                  <Label styleClass="title" text="Create Account">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="body-text" text="Join EduPortal to manage your academic journey" />
+               </children>
+            </VBox>
+            
+            <!-- Registration Form -->
+            <VBox alignment="CENTER" maxWidth="500.0" spacing="24.0" styleClass="form-container">
+               <children>
+                  <GridPane hgap="20.0" vgap="16.0">
+                     <children>
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <children>
+                              <Label styleClass="input-label" text="Full Name" />
+                              <TextField fx:id="nameField" promptText="Enter your full name" styleClass="text-field" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                           <children>
+                              <Label styleClass="input-label" text="Email Address" />
+                              <TextField fx:id="emailField" promptText="Enter your email" styleClass="text-field" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="input-label" text="Username" />
+                              <TextField fx:id="usernameField" promptText="Choose a username" styleClass="text-field" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="input-label" text="Program" />
+                              <ComboBox fx:id="programComboBox" promptText="Select program" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                           <children>
+                              <Label styleClass="input-label" text="Password" />
+                              <PasswordField fx:id="passwordField" promptText="Minimum 6 characters" styleClass="password-field" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label styleClass="input-label" text="Confirm Password" />
+                              <PasswordField fx:id="confirmPasswordField" promptText="Re-enter password" styleClass="password-field" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="8.0" styleClass="input-group" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                           <children>
+                              <Label styleClass="input-label" text="Current Semester" />
+                              <ComboBox fx:id="semesterComboBox" promptText="Select semester" styleClass="combo-box" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+                     </columnConstraints>
+                  </GridPane>
+                  
+                  <VBox alignment="CENTER" spacing="16.0">
+                     <children>
+                        <Button onAction="#handleRegister" prefWidth="200.0" styleClass="btn, btn-success" text="Create Account" />
+                        <Button onAction="#handleBackToLogin" styleClass="btn, btn-secondary" text="Back to Sign In" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            
+            <Label styleClass="hint-text" text="By creating an account, you agree to our terms of service" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
